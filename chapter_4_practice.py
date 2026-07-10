@@ -61,3 +61,12 @@ for flow_rate in flow_rates:
     print(f"Total volume after hour {hour}: {total_volume} liters")
     hour = hour + 1
 # 5--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+temps = [55.2, 56.4, 58.1, 54.3, 55.0, 57.2, 59.3, 56.1, 55.8, 54.9]
+mid_day_temps = []
+# mid_day_temps = temps[3:7] (this is the correct answer)
+for index in temps[3:7]:
+    mid_day_temps.append(index)
+print(mid_day_temps)
+average_value = sum(mid_day_temps) / len(mid_day_temps)
+print(f"The average mid-day temperature is: {average_value}")
+# 6--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

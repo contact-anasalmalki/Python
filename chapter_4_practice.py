@@ -18,7 +18,7 @@ print(max(pressures))
 average_pressure = sum(pressures) / len(pressures)
 print(average_pressure)
 
-# Wrong_way
+# Wrong way
 equipments = ["pump", "valve", "reactor"]
 steps = 1
 instructions = []
@@ -30,7 +30,7 @@ for equipment in equipments[:]:
     steps = steps + 1
 print("Installation check is complete")
 
-# correct_way
+# correct way
 equipments = ["pump", "valve", "reactor"]
 steps = 1
 for equipment in equipments[
@@ -41,11 +41,22 @@ for equipment in equipments[
     steps = steps + 1
 print("Installation check is complete")
 
-# best way
-equipments = ["pump", "valve", "reactor"]
+# hard way
+flow_rates = [12.5, 14.2, 11.8, 15.0]
+hour = 1
+recorded_flows = []
+for flow_rate in flow_rates:
+    recorded_flows.append(flow_rate)
+    running_total = sum(recorded_flows)
+    print(f"Total volume after hour {hour}: {running_total} liters")
+    hour = hour + 1
 
-# 'enumerate' automatically tracks the count and the item at the same time
-for step, equipment in enumerate(equipments, start=1):
-    print(f"{step}. Install {equipment.title()}.")
+# easy way
+flow_rates = [12.5, 14.2, 11.8, 15.0]
+hour = 1
+total_volume = 0.0  # empty piggy bank
 
-print("Installation check is complete.")
+for flow_rate in flow_rates:
+    total_volume = total_volume + flow_rate
+    print(f"Total volume after hour {hour}: {total_volume} liters")
+    hour = hour + 1

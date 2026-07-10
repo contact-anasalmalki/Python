@@ -11,13 +11,13 @@ print(temps_celsius)
 temps_fahrenheit = [1, 2, 3, 4, 5]
 # lists are iterable, so we can use a for loop to iterate through the list and perform the conversion in one line of code without the need for a new list or the append() method or []
 temps_celsius = [(temp - 32) * 5 / 9 for temp in temps_fahrenheit]
-
+# 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 pressures = [101.3, 105.4, 98.2, 110.1, 103.5]
 print(min(pressures))
 print(max(pressures))
 average_pressure = sum(pressures) / len(pressures)
 print(average_pressure)
-
+# 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Wrong way
 equipments = ["pump", "valve", "reactor"]
 steps = 1
@@ -40,11 +40,11 @@ for equipment in equipments[
     print(f"{steps}. Install {equipment.title()}")
     steps = steps + 1
 print("Installation check is complete")
-
+# 4--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # hard way
 flow_rates = [12.5, 14.2, 11.8, 15.0]
 hour = 1
-recorded_flows = []
+recorded_flows = []  # list not a value
 for flow_rate in flow_rates:
     recorded_flows.append(flow_rate)
     running_total = sum(recorded_flows)
@@ -54,9 +54,10 @@ for flow_rate in flow_rates:
 # easy way
 flow_rates = [12.5, 14.2, 11.8, 15.0]
 hour = 1
-total_volume = 0.0  # empty piggy bank
+total_volume = 0.0  # empty piggy bank (value not a list)
 
 for flow_rate in flow_rates:
     total_volume = total_volume + flow_rate
     print(f"Total volume after hour {hour}: {total_volume} liters")
     hour = hour + 1
+# 5--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -70,3 +70,8 @@ print(mid_day_temps)
 average_value = sum(mid_day_temps) / len(mid_day_temps)
 print(f"The average mid-day temperature is: {average_value}")
 # 6--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+phases = ["research", "design", "simulation", "construction", "testing"]
+phase_num = 1
+for phase in phases:
+    print(f"phase {phase_num}: {phase}".title())
+    phase_num = phase_num + 1

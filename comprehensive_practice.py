@@ -59,3 +59,76 @@ if search_username in usernames:
     print("Account found.")
 else:
     print("Account not found.")
+# -----------------------------------------------------
+
+player1 = {
+    "username": "alpha_99",
+    "score": 85,
+    "favorite_game": "chess",
+    "achievements": ["first_win", "speedrun"],
+}
+
+player2 = {
+    "username": "shadow_coder",
+    "score": 42,
+    "favorite_game": "portal",
+    "achievements": ["first_win"],
+}
+
+player3 = {
+    "username": "speedy_01",
+    "score": 65,
+    "favorite_game": "chess",
+    "achievements": ["marathon", "speedrun"],
+}
+
+users = [player1, player2, player3]
+
+player4 = {
+    "username": "neon_rider",
+    "score": 12,
+    "favorite_game": "tetris",
+    "achievements": [],
+}
+users.append(player4)
+
+player2["score"] = 55
+
+print("--- PLATFORM USERS REPORT ---")
+
+for user in users:
+    username = user["username"].title()
+    score = user["score"]
+
+    if score >= 80:
+        rank = "Elite"
+    elif score >= 50:
+        rank = "Veteran"
+    else:
+        rank = "Rookie"
+
+    print(f"\nUsername: {username}")
+    print(f"\tRank: {rank}")
+    print(f"\tScore: {score}")
+
+    # Handle achievements using Truthy/Falsy logic and nested looping
+    if user["achievements"]:
+        print("\tAchievements:")
+        for achievement in user["achievements"]:
+            print(f"\t\t- {achievement.title()}")
+    else:
+        print("\tNo achievements unlocked yet.")
+
+
+print("\n--- SYSTEM ANALYTICS ---")
+
+unique_games = set([user["favorite_game"] for user in users])
+print(f"Unique games played on the platform: {unique_games}")
+
+search_username = "neon_rider"
+usernames = [user["username"] for user in users]
+
+if search_username in usernames:
+    print(f"Search: Account for '{search_username}' found.")
+else:
+    print(f"Search: Account for '{search_username}' not found.")

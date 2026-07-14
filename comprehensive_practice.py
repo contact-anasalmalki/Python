@@ -25,7 +25,6 @@ player4 = {
 }
 users.append(player4)
 player2["score"] = 55  # this also works users[1]["score"] = 55
-all_games = []
 for user in users:
     player_name = user["username"]
     print(f"username: {player_name.title()}")
